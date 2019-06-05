@@ -1,19 +1,30 @@
+$(document).ready(function() {
 
-var x = parseInt(prompt("Enter a number"));
 
-var addTen = function(input){
-  var y = 10
-  var result = input + y
-  return result;
+  $("#formOne").submit(function(event) {
+    var person1Input = $("input#person1").val();
+    console.log(person1Input);
+    var person2Input = $("input#person2").val();
+    var animalInput= $("input#animal").val();
+    var exclamationInput = $("input#exclamation").val();
+    var verbInput = $("input#verb").val();
+    var nounInput = $("input#noun").val();
 
-};
+    $(".person1").append(person1Input);
+    console.log(person1Input);
+    $(".person2").append(person2Input);
+    console.log(person2Input);
+    $(".animal").append(animalInput);
+    console.log(animalInput);
+    $(".exclamation").append(exclamationInput);
+    $(".verb").append(verbInput);
+    $(".noun").append(nounInput);
 
-var addTwenty = function(input){
-  var y = 20
-  return input + y
+    $("#story").show();
 
-};
+    event.preventDefault();
+  });
 
-console.log(addTen(x));
-console.log(addTwenty(x));
-console.log(result);
+  console.log(person1Input);
+
+});
